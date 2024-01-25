@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min Responsiva Hemsida</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -19,12 +19,23 @@
     </header>
 
     <section>
-        <h1>Automatisering och publicering</h1>
-        <p>I denna uppgift ska jag skapa en grundstruktur för en webbplats med HTML, CSS, JavaScript och bilder. Jag kommer att använda NodeJs för att automatisera viktiga uppgifter som minifiering av CSS, JavaScript och HTML, samt optimera bilder. Detta innebär att jag ska använda moderna bildformat och se till att min kod fungerar i olika webbläsare. Allt mitt arbete ska kunna återställas med hjälp av "npm install". Målet är att förbereda filerna för publicering på ett effektivt sätt.</p>
+        <h1>Ramschema</h1>
+        <input type="search" placeholder="Sök efter kurskod eller kursnamn" id="search"> 
+        <table> 
+            <thead> 
+                <tr> 
+                    <th id="code">Kurskod</th> 
+                    <th id="name">Namn</th> 
+                    <th id="progression">Progression</th> 
+                </tr> 
+            </thead> 
+            <tbody id="table-list"> 
+            </tbody> 
+        </table> 
+    <div id="error"></div>
     </section>
-
     <footer>
-        <p>&copy; <span id="currentYear"></span> Philip Telbergs footer</p>
+        <p>Philip Telberg</p>
     </footer>
 </body>
 </html>
