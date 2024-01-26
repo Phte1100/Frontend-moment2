@@ -1,7 +1,7 @@
 "use strict";
 
 const url = "https://dahlgren.miun.se/ramschema_ht23.php";
-let schedule;
+const schedule;
 window.onload = init;
 
 async function init() {
@@ -35,45 +35,45 @@ function displaySchedule(schedule) {
 }
 
 //Sorterar datan med klick
-let codeSort = document.getElementById("code");
+const codeSort = document.getElementById("code");
 codeSort.addEventListener("click", function (e) {
     schedule.sort((a, b) => (a.code > b.code) ? 1 : -1);
     displaySchedule(schedule);
 })
-//sorterar omvändordning vid dubbelkliock
-let codeSortReverse = document.getElementById("code");
+//sorterar omvändordning vid dubbelklick
+const codeSortReverse = document.getElementById("code");
 codeSortReverse.addEventListener("dblclick", function (e) {
     schedule.sort((a, b) => (a.code < b.code) ? 1 : -1);
     displaySchedule(schedule);
 })
 
-let coursenameSort = document.getElementById("name");
+const coursenameSort = document.getElementById("name");
 coursenameSort.addEventListener("click", function (e) {
     schedule.sort((a, b) => (a.coursename > b.coursename) ? 1 : -1);
     displaySchedule(schedule);
 })
 
-let coursenameSortReverse = document.getElementById("name");
+const coursenameSortReverse = document.getElementById("name");
 coursenameSortReverse.addEventListener("dblclick", function (e) {
     schedule.sort((a, b) => (a.coursename < b.coursename) ? 1 : -1);
     displaySchedule(schedule);
 })
 
-let progressionSort = document.getElementById("progression");
+const progressionSort = document.getElementById("progression");
 progressionSort.addEventListener("click", function (e) {
     schedule.sort((a, b) => (a.progression > b.progression) ? 1 : -1);
     displaySchedule(schedule);
 })
 
-let progressionSortReverse = document.getElementById("progression");
+const progressionSortReverse = document.getElementById("progression");
 progressionSortReverse.addEventListener("dblclick", function (e) {
     schedule.sort((a, b) => (a.progression < b.progression) ? 1 : -1);
     displaySchedule(schedule);
 })
 //Sökfunktion
-let scheduleFilter = document.getElementById ("search");
+const scheduleFilter = document.getElementById ("search");
 scheduleFilter.addEventListener("input", function (e) {
-    let filtredSchedule = schedule.filter((find) => {
+    const filtredSchedule = schedule.filter((find) => {
         return find.code.toLowerCase().includes(e.target.value.toLowerCase())|| find.coursename.toLowerCase().includes(e.target.value.toLowerCase());
     
 })
