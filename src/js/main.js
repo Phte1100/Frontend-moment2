@@ -6,15 +6,19 @@ window.onload = init;
 
 async function init() {
     try {
+
+    // fetchanrop
     const response = await fetch(url);
     schedule = await response.json();
 
     displaySchedule(schedule)
 
 } catch {
+    // catch om något går fel
     document.getElementById("error").innerHTML = "<p>Något gick fel!</p>";
 }
 
+// funktion för att visa datan
 function displaySchedule(schedule) {
     const tableEl = document.getElementById("table-list");
     tableEl.innerHTML = ``;
@@ -30,12 +34,13 @@ function displaySchedule(schedule) {
     });
 }
 
+//Sorterar datan med klick
 let codeSort = document.getElementById("code");
 codeSort.addEventListener("click", function (e) {
     schedule.sort((a, b) => (a.code > b.code) ? 1 : -1);
     displaySchedule(schedule);
 })
-
+//sorterar omvändordning vid dubbelkliock
 let codeSortReverse = document.getElementById("code");
 codeSortReverse.addEventListener("dblclick", function (e) {
     schedule.sort((a, b) => (a.code < b.code) ? 1 : -1);
@@ -65,7 +70,7 @@ progressionSortReverse.addEventListener("dblclick", function (e) {
     schedule.sort((a, b) => (a.progression < b.progression) ? 1 : -1);
     displaySchedule(schedule);
 })
-
+//Sökfunktion
 let scheduleFilter = document.getElementById ("search");
 scheduleFilter.addEventListener("input", function (e) {
     let filtredSchedule = schedule.filter((find) => {
