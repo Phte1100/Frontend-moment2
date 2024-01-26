@@ -45,7 +45,18 @@ table {
 
 #code, #name, #progression {
     text-align: left;
+    cursor: pointer;
 } 
+
+#code:hover {
+    background-color: grey;
+  }
+  #name:hover {
+    background-color: grey;
+  }
+  #progression:hover {
+    background-color: grey;
+  }
 
 img {
     max-width: 900px;
