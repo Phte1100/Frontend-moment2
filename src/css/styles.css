@@ -34,6 +34,19 @@ section {
     margin-bottom: 20%;
 }
 
+table {
+    width: 100%;
+}
+
+#search {
+    width: 50%;
+    margin-bottom: 5%;
+}
+
+#code, #name, #progression {
+    text-align: left;
+} 
+
 img {
     max-width: 900px;
     width: 100%;
